@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: agent-launchpad
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PRIVATE_KEY
+        sync: false
+      - key: PORT
+        value: 10000
